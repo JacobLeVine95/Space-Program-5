@@ -1,0 +1,46 @@
+<html>
+    <head>
+       <title> </title>
+        <script src="helper2.js"></script>
+        <script src="helper.js"></script>
+    </head>
+   <body>
+        <h1> </h1>
+        <p>
+            <!-- Adds US Space Station Lab background noises.-->
+            <audio controls>
+                <source src="us-lab-background.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+            <input type="text" id="num1" />
+            <br>
+            <input type="text" id="num2" />
+            <br>
+            <input type="button" value="calculate" onclick="calcSum(document.getElementById('num1').value, 2, document.getElementById('num2').value, 2);" />
+            <input type="button" value="stop" onclick="displayAlert('What is your favorite city? ');" />
+            <br>
+            <input type="text" id="firstname" />
+            <input type="button" value="Show Letters" onclick="displayLettersInName();" />
+
+            <br>
+            <input type="button" value="btnSubmit1" value="Submit1" onclick="btnSubmitClicked();" />
+            <input type="button" value="btnSubmit2" value="Submit2" onclick="btnSubmit2Clicked();" disabled="true"/>
+            <script>
+                // this function enable btnSubmit2 and disables btnSubmit1
+                function btnSubmitClicked(){
+                    //disable btnSubmit1
+                    document.getElementById("btnSubmit1").disabled = true;
+                    //enable btnSubmit2
+                    document.getElementById("btnSubmit2").disabled = false;
+                }
+
+                // this function disables btnSubmit2 and enables btnSubmit1
+                function btnSubmit2Clicked(){
+                    document.getElementById("btnSubmit1").disabled = false;
+                    document.getElementById("btnSubmit2").disabled = true;
+                }
+                //displayLettersInName("Jacob");
+            </script>
+        </p>
+   </body>
+</html>
